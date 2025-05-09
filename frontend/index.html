@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ثبت نام دانش آموز</title>
+    <!-- Iconify Solar icons CDN -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" role="main" aria-label="فرم ثبت نام دانش آموز">
+      <div class="profile-icon-wrapper" aria-hidden="true">
+        <iconify-icon icon="solar:user-circle-broken"></iconify-icon>
+      </div>
+      <div class="tab-wrapper">
+        <div class="tab tab-active" aria-label="تب دانش آموز">دانش آموز</div>
+        <div class="tab" aria-label="تب معلم">معلم</div>
+        <div class="tab" aria-label="تب اولیا">اولیا</div>
+      </div>
+      <h2>ثبت نام به عنوان دانش آموز</h2>
+      <form>
+        <div style="width: 100%">
+          <label for="name">اسم</label>
+          <div class="input-group">
+            <iconify-icon icon="solar:user-broken"></iconify-icon>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="نام کاربری"
+              autocomplete="name"
+              required
+              aria-required="true"
+            />
+          </div>
+        </div>
+        <div style="width: 100%">
+          <label for="email">ایمیل</label>
+          <div class="input-group">
+            <iconify-icon icon="solar:mailbox-broken"></iconify-icon>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="نام کاربری"
+              autocomplete="email"
+              required
+              aria-required="true"
+            />
+          </div>
+        </div>
+        <div style="width: 100%">
+          <label for="year">سال تحصیلی</label>
+          <div class="input-group">
+            <iconify-icon icon="solar:rounded-magnifer-broken"></iconify-icon>
+            <input
+              type="text"
+              id="year"
+              name="year"
+              placeholder="نام کاربری"
+              autocomplete="off"
+              required
+              aria-required="true"
+            />
+          </div>
+        </div>
+        <div style="width: 100%">
+          <label for="phone">تلفن</label>
+          <div class="input-group">
+            <iconify-icon icon="solar:phone-broken"></iconify-icon>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="نام کاربری"
+              autocomplete="tel"
+              required
+              aria-required="true"
+            />
+          </div>
+        </div>
+        <div style="width: 100%">
+          <label for="field">رشته</label>
+          <div class="input-group">
+            <iconify-icon icon="solar:rounded-magnifer-broken"></iconify-icon>
+            <input
+              type="text"
+              id="field"
+              name="field"
+              placeholder="رشته شما"
+              autocomplete="off"
+              required
+              aria-required="true"
+            />
+          </div>
+        </div>
+        <div style="width: 100%">
+          <label for="password">رمز عبور</label>
+          <div class="input-group">
+            <iconify-icon icon="solar:lock-broken"></iconify-icon>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="پایه شما"
+              autocomplete="new-password"
+              required
+              aria-required="true"
+            />
+          </div>
+        </div>
+        <div class="submit-btn-wrapper">
+            <button class="submit-btn" type="submit" aria-label="ثبت نام">
+              ثبت نام
+            </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
