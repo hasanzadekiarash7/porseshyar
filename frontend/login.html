@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ثبت نام دانش آموز</title>
+    <title>ورود دانش آموز</title>
     <!-- Iconify Solar icons CDN -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="style.css" />
@@ -13,13 +13,13 @@
       class="container container-active"
       id="student"
       role="main"
-      aria-label="فرم ثبت نام دانش آموز"
+      aria-label="فرم ورود دانش آموز"
     >
       <div class="profile-icon-wrapper" aria-hidden="true">
         <iconify-icon icon="solar:user-circle-broken"></iconify-icon>
       </div>
-      <h2>ثبت نام به عنوان <span id="changeText">دانش آموز</span></h2>
-      <form>
+      <h2>ورود به عنوان <span id="changeText">دانش آموز</span></h2>
+      <form class="login-grid">
         <div class="tab-wrapper">
           <div class="tab student-btn tab-active" aria-label="تب دانش آموز">
             دانش آموز
@@ -43,66 +43,6 @@
           </div>
         </div>
         <div style="width: 100%">
-          <label for="email">ایمیل</label>
-          <div class="input-group">
-            <iconify-icon icon="solar:mailbox-broken"></iconify-icon>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="نام کاربری"
-              autocomplete="email"
-              required
-              aria-required="true"
-            />
-          </div>
-        </div>
-        <div style="width: 100%">
-          <label for="year">سال تحصیلی</label>
-          <div class="input-group">
-            <iconify-icon icon="solar:rounded-magnifer-broken"></iconify-icon>
-            <input
-              type="text"
-              id="year"
-              name="year"
-              placeholder="نام کاربری"
-              autocomplete="off"
-              required
-              aria-required="true"
-            />
-          </div>
-        </div>
-        <div style="width: 100%">
-          <label for="phone">تلفن</label>
-          <div class="input-group">
-            <iconify-icon icon="solar:phone-broken"></iconify-icon>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="نام کاربری"
-              autocomplete="tel"
-              required
-              aria-required="true"
-            />
-          </div>
-        </div>
-        <div style="width: 100%">
-          <label for="field">رشته</label>
-          <div class="input-group">
-            <iconify-icon icon="solar:rounded-magnifer-broken"></iconify-icon>
-            <input
-              type="text"
-              id="field"
-              name="field"
-              placeholder="رشته شما"
-              autocomplete="off"
-              required
-              aria-required="true"
-            />
-          </div>
-        </div>
-        <div style="width: 100%">
           <label for="password">رمز عبور</label>
           <div class="input-group">
             <iconify-icon icon="solar:lock-broken"></iconify-icon>
@@ -117,27 +57,22 @@
             />
           </div>
         </div>
-        <a href="/login.html" class="link-primary"
-          >اکانت داری؟ برو و وارد اکانتت شو</a
+        <a href="/index.html" class="link-primary"
+          >اکانت نداری؟ برو و اکانت بساز</a
         >
         <div class="submit-btn-wrapper">
-          <button class="submit-btn" type="submit" aria-label="ثبت نام">
-            ثبت نام
+          <button class="submit-btn" type="submit" aria-label="ورود">
+            ورود
           </button>
         </div>
       </form>
     </div>
-    <div
-      class="container"
-      id="teacher"
-      role="main"
-      aria-label="فرم ثبت نام معلم"
-    >
+    <div class="container" id="teacher" role="main" aria-label="فرم ورود معلم">
       <div class="profile-icon-wrapper" aria-hidden="true">
         <iconify-icon icon="solar:user-circle-broken"></iconify-icon>
       </div>
-      <h2>ثبت نام به عنوان <span id="changeText">معلم</span></h2>
-      <form>
+      <h2>ورود به عنوان <span id="changeText">معلم</span></h2>
+      <form class="login-grid">
         <div class="tab-wrapper">
           <div class="tab student-btn" aria-label="تب دانش آموز">دانش آموز</div>
           <div class="tab teacher-btn tab-active" aria-label="تب معلم">
@@ -161,81 +96,6 @@
           </div>
         </div>
         <div style="width: 100%">
-          <label for="email">ایمیل</label>
-          <div class="input-group">
-            <iconify-icon icon="solar:mailbox-broken"></iconify-icon>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="نام کاربری"
-              autocomplete="email"
-              required
-              aria-required="true"
-            />
-          </div>
-        </div>
-        <div style="width: 100%">
-          <label for="year">سال تحصیلی</label>
-          <div class="input-group">
-            <iconify-icon icon="solar:rounded-magnifer-broken"></iconify-icon>
-            <input
-              type="text"
-              id="year"
-              name="year"
-              placeholder="نام کاربری"
-              autocomplete="off"
-              required
-              aria-required="true"
-            />
-          </div>
-        </div>
-        <div style="width: 100%">
-          <label for="phone">تلفن</label>
-          <div class="input-group">
-            <iconify-icon icon="solar:phone-broken"></iconify-icon>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="نام کاربری"
-              autocomplete="tel"
-              required
-              aria-required="true"
-            />
-          </div>
-        </div>
-        <div style="width: 100%">
-          <label for="field">پایه(پایه های) تدریس</label>
-          <div class="input-group">
-            <iconify-icon icon="solar:rounded-magnifer-broken"></iconify-icon>
-            <input
-              type="text"
-              id="field"
-              name="field"
-              placeholder="رشته شما"
-              autocomplete="off"
-              required
-              aria-required="true"
-            />
-          </div>
-        </div>
-        <div style="width: 100%">
-          <label for="field">درس</label>
-          <div class="input-group">
-            <iconify-icon icon="solar:rounded-magnifer-broken"></iconify-icon>
-            <input
-              type="text"
-              id="field"
-              name="field"
-              placeholder="رشته شما"
-              autocomplete="off"
-              required
-              aria-required="true"
-            />
-          </div>
-        </div>
-        <div style="width: 100%">
           <label for="password">رمز عبور</label>
           <div class="input-group">
             <iconify-icon icon="solar:lock-broken"></iconify-icon>
@@ -250,27 +110,22 @@
             />
           </div>
         </div>
-        <a href="/login.html" class="link-primary"
-          >اکانت داری؟ برو و وارد اکانتت شو</a
+        <a href="/index.html" class="link-primary"
+          >اکانت نداری؟ برو و اکانت بساز</a
         >
         <div class="submit-btn-wrapper">
-          <button class="submit-btn" type="submit" aria-label="ثبت نام">
-            ثبت نام
+          <button class="submit-btn" type="submit" aria-label="ورود">
+            ورود
           </button>
         </div>
       </form>
     </div>
-    <div
-      class="container"
-      id="parent"
-      role="main"
-      aria-label="فرم ثبت نام اولیا"
-    >
+    <div class="container" id="parent" role="main" aria-label="فرم ورود اولیا">
       <div class="profile-icon-wrapper" aria-hidden="true">
         <iconify-icon icon="solar:user-circle-broken"></iconify-icon>
       </div>
-      <h2>ثبت نام به عنوان <span id="changeText">اولیا</span></h2>
-      <form>
+      <h2>ورود به عنوان <span id="changeText">اولیا</span></h2>
+      <form class="login-grid">
         <div class="tab-wrapper">
           <div class="tab student-btn" aria-label="تب دانش آموز">دانش آموز</div>
           <div class="tab teacher-btn" aria-label="تب معلم">معلم</div>
@@ -294,51 +149,6 @@
           </div>
         </div>
         <div style="width: 100%">
-          <label for="email">ایمیل</label>
-          <div class="input-group">
-            <iconify-icon icon="solar:mailbox-broken"></iconify-icon>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="نام کاربری"
-              autocomplete="email"
-              required
-              aria-required="true"
-            />
-          </div>
-        </div>
-        <div style="width: 100%">
-          <label for="year">سال تحصیلی</label>
-          <div class="input-group">
-            <iconify-icon icon="solar:rounded-magnifer-broken"></iconify-icon>
-            <input
-              type="text"
-              id="year"
-              name="year"
-              placeholder="نام کاربری"
-              autocomplete="off"
-              required
-              aria-required="true"
-            />
-          </div>
-        </div>
-        <div style="width: 100%">
-          <label for="phone">تلفن</label>
-          <div class="input-group">
-            <iconify-icon icon="solar:phone-broken"></iconify-icon>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="نام کاربری"
-              autocomplete="tel"
-              required
-              aria-required="true"
-            />
-          </div>
-        </div>
-        <div style="width: 100%">
           <label for="password">رمز عبور</label>
           <div class="input-group">
             <iconify-icon icon="solar:lock-broken"></iconify-icon>
@@ -353,12 +163,12 @@
             />
           </div>
         </div>
-        <a href="/login.html" class="link-primary"
-          >اکانت داری؟ برو و وارد اکانتت شو</a
+        <a href="/index.html" class="link-primary"
+          >اکانت نداری؟ برو و اکانت بساز</a
         >
         <div class="submit-btn-wrapper">
-          <button class="submit-btn" type="submit" aria-label="ثبت نام">
-            ثبت نام
+          <button class="submit-btn" type="submit" aria-label="ورود">
+            ورود
           </button>
         </div>
       </form>
@@ -368,7 +178,7 @@
       submitBtns.forEach((btn) => {
         btn.addEventListener("click", (e) => {
           e.preventDefault(); // جلوگیری از ارسال فرم برای تست
-          console.log("ثبت نام کلیک شد");
+          console.log("ورود کلیک شد");
         });
       });
       const studentBtn = document.querySelectorAll(".student-btn");
