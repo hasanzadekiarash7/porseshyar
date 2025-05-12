@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap");
-
-* {
-  box-sizing: border-box;
-}
+@import url("./main.css");
 
 body {
   margin: 0;

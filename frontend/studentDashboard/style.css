@@ -1,0 +1,237 @@
+@import url("../main.css");
+body {
+  margin: 0;
+  background: linear-gradient(90deg, #8a54ff, #3b8dff);
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* کانتینر کلی */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.container-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  direction: rtl;
+}
+/* بخش اصلی وسط */
+main {
+  background: #d3d0ce;
+  border-radius: 12px;
+  flex: 1;
+  padding: 40px 30px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.container-center h2 {
+  flex: 1;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+.container-center p {
+  flex: 1;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.container-center img {
+  width: 100%;
+  height: 100%;
+  max-width: 470px;
+  height: auto;
+  user-select: none;
+}
+
+/* ستون کناری راست */
+aside {
+  width: 200px;
+  background: #d3d0ce;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  direction: rtl;
+  color: #222;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+  height: 100vh;
+}
+
+/* تصویر پروفایل */
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f0c9b5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  color: #3b2e2e;
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+/* نام و نقش */
+.username {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.role {
+  color: #5a7fff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.status {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* منو */
+nav {
+  width: 100%;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #444;
+  cursor: pointer;
+  padding: 10px 8px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: linear-gradient(135deg, #3bb1ff, #8e55ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* آیکون خروج */
+.logout {
+  margin-top: auto;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #222;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logout:hover {
+  background: linear-gradient(135deg, #3bb1ff, #8e55ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+iconify-icon {
+  font-size: 25px;
+  color: #000 !important;
+}
+/* آیکون همبرگر */
+.hamburger {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1100;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+  cursor: pointer;
+  display: none;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger:hover,
+.hamburger:focus {
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+.hamburger iconify-icon {
+  width: 32px;
+  height: 32px;
+  color: #3b3b3b;
+}
+
+/* ریسپانسیو */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    padding-top: 80px;
+    background: #f5f5f5;
+    border-left: none;
+    border-right: 2px solid #ccc;
+    box-shadow: 0 0 20px rgb(0 0 0 / 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  aside.open {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+
+  main {
+    padding: 20px 15px;
+    min-height: auto;
+  }
+
+  main img {
+    max-width: 90vw;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
