@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>داشبورد</title>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <aside id="sidebar" aria-label="پنل کاربری">
+      <img class="profile-pic" src="/images/Ellipse 3.svg" aria-hidden="true" />
+      <div class="username">کیارش حسن زاده</div>
+      <div class="role">دانش آموز</div>
+      <nav>
+        <a tabindex="0" class="link-primary" aria-label="پروفایل">
+          <iconify-icon icon="solar:user-circle-broken"></iconify-icon>
+          پروفایل
+        </a>
+        <a tabindex="0" aria-label="تاریخچه آزمون ها">
+          <iconify-icon icon="solar:history-2-broken"></iconify-icon>
+          تاریخچه آزمون ها
+        </a>
+        <a tabindex="0" aria-label="آزمون ها">
+          <iconify-icon icon="solar:book-bookmark-broken"></iconify-icon>
+          آزمون ها
+        </a>
+      </nav>
+      <a
+        href="./index.html"
+        class="logout"
+        style="text-decoration: none"
+        tabindex="0"
+        aria-label="خروج از حساب"
+      >
+        <iconify-icon icon="solar:logout-3-broken"></iconify-icon>
+        خروج از حساب
+      </a>
+    </aside>
+    <iconify-icon
+      id="hamburgerBtn"
+      class="hamburger"
+      icon="solar:hamburger-menu-broken"
+    ></iconify-icon>
+    <main role="main" tabindex="0">
+      <h2>پروفایل</h2>
+
+      <section aria-labelledby="user-info-header">
+        <h3 id="user-info-header" class="section-header">اطلاعات کاربر</h3>
+        <div class="profile-form">
+          <div class="form-group">
+            <label for="username">نام کاربری</label>
+            <div class="input-wrapper">
+              <iconify-icon icon="solar:user-circle-broken"></iconify-icon>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="نام کاربری"
+                autocomplete="username"
+                value="کیارش حسن زاده"
+                aria-required="true"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">ایمیل</label>
+            <div class="input-wrapper">
+              <iconify-icon icon="solar:mailbox-broken"></iconify-icon>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ایمیل"
+                autocomplete="email"
+                value="example@example.com"
+                aria-required="true"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">تلفن</label>
+            <div class="input-wrapper">
+              <iconify-icon icon="solar:phone-broken"></iconify-icon>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="تلفن"
+                autocomplete="tel"
+                value="09123456789"
+                aria-required="true"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">رمز عبور</label>
+            <div class="input-wrapper">
+              <iconify-icon icon="solar:lock-password-broken"></iconify-icon>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="رمز عبور"
+                autocomplete="current-password"
+                value="123456"
+                aria-required="true"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="education-info-header">
+        <h3 id="education-info-header" class="section-header">
+          اطلاعات تحصیلی
+        </h3>
+        <p class="info-text" tabindex="0">
+          پایه دهم &nbsp;&nbsp; رشته: شبکه و نرم افزار &nbsp;&nbsp; سال تحصیلی:
+          1403-1404
+        </p>
+      </section>
+
+      <section aria-labelledby="settings-header">
+        <h3 id="settings-header" class="section-header">تنظیمات</h3>
+        <p class="info-text font-type" tabindex="0">
+          نوع فونت:
+          <span title="وزیر" class="link-primary" tabindex="0" role="button"
+            >وزیر</span
+          >
+          <span title="تنها" tabindex="0" role="button">تنها</span>
+          <span title="نستلیق" tabindex="0" role="button">نستلیق</span>
+        </p>
+        <p class="info-text theme-toggle" tabindex="0">
+          تم صفحه:
+          <span title="روشن" tabindex="0" role="button">
+            <iconify-icon icon="solar:moon-stars-broken"></iconify-icon>
+            روشن
+          </span>
+          <span title="تاریک" tabindex="0" role="button">
+            <iconify-icon icon="solar:sun-2-broken"></iconify-icon>
+            تاریک
+          </span>
+        </p>
+      </section>
+    </main>
+    <script>
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const sidebar = document.getElementById("sidebar");
+
+      hamburgerBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+
+      // Optional: close sidebar when clicking outside (on mobile)
+      document.addEventListener("click", (e) => {
+        if (
+          !sidebar.contains(e.target) &&
+          !hamburgerBtn.contains(e.target) &&
+          sidebar.classList.contains("open")
+        ) {
+          sidebar.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
+</html>

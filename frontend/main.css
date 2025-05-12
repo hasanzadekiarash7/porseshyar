@@ -4,3 +4,14 @@
   box-sizing: border-box;
   font-family: "Vazirmatn", sans-serif;
 }
+
+.link-primary {
+  background: linear-gradient(135deg, #3bb1ff, #8e55ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  width: 100%;
+  grid-column: span 2;
+}

@@ -214,19 +214,6 @@ input::placeholder {
   box-shadow: 0 4px 14px rgba(59, 177, 255, 0.7);
 }
 
-.link-primary {
-  background: linear-gradient(135deg, #3bb1ff, #8e55ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  width: 100%;
-  grid-column: span 2;
-  font-size: 20px;
-  font-weight: bold;
-}
-
 /* ستون دوم input ها */
 form > div:nth-child(odd) {
   justify-self: start;
