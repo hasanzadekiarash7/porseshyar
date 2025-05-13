@@ -17,8 +17,8 @@ main {
   border-radius: 12px;
   flex: 1;
   padding: 25px 30px;
-  margin: 50px;
-  min-height: 480px;
+  margin: 25px 50px;
+  max-height: 630px;
   color: #222;
   overflow-y: auto;
   box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
@@ -33,64 +33,6 @@ main h2 {
   text-align: center;
 }
 
-/* فرم اطلاعات پروفایل */
-.profile-form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px 40px;
-  direction: rtl;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-group label {
-  font-weight: 700;
-  font-size: 1.1rem;
-  user-select: text;
-}
-
-.input-wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  background: #111;
-  border-radius: 8px;
-  overflow: hidden;
-  color: #eee;
-  height: 40px;
-}
-
-.input-wrapper iconify-icon {
-  padding: 0 12px;
-  font-size: 20px;
-  color: #999;
-  flex-shrink: 0;
-  user-select: none;
-}
-
-.input-wrapper input {
-  background: transparent;
-  border: none;
-  color: #eee;
-  font-size: 1rem;
-  padding: 0 12px;
-  width: 100%;
-  height: 100%;
-  direction: rtl !important;
-  outline: none;
-  user-select: text;
-  font-family: "Vazirmatn", sans-serif;
-}
-
-.input-wrapper input::placeholder {
-  color: #999;
-}
-
-/* بخش اطلاعات کاربر و رمز عبور */
 .section-header {
   font-weight: 700;
   font-size: 1.3rem;
@@ -99,87 +41,134 @@ main h2 {
   user-select: text;
 }
 
-/* اطلاعات تحصیلی و تنظیمات */
-.info-text {
-  font-size: 1rem;
-  margin-top: 10px;
-  line-height: 1.4;
-  user-select: text;
+.exam-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
-.info-text strong {
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
   font-weight: 700;
+  margin-bottom: 5px;
 }
 
-/* لینک‌های تنظیمات */
-.settings-links {
-  margin-top: 15px;
+.form-group input {
+  background: #222;
+  border: none;
+  color: #eee;
   font-size: 1rem;
+  padding: 0 12px;
+  width: 100%;
+  height: 100%;
+  direction: rtl !important;
+  outline: none;
+  border-radius: 8px;
+  overflow: hidden;
   user-select: text;
+  font-family: "Vazirmatn", sans-serif;
+  height: 40px;
+}
+.form-group input::placeholder {
+  color: #999;
 }
 
-.settings-links span {
-  margin-left: 10px;
-  cursor: pointer;
-  color: #3b8dff;
+.form-group iconify-icon {
+  padding: 0 12px;
+  font-size: 20px;
+  color: #eee !important;
+  flex-shrink: 0;
   user-select: none;
 }
 
-.settings-links span:hover {
-  text-decoration: underline;
+.question-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
-/* فونت های تنظیمات */
-.font-type {
-  direction: rtl;
-  user-select: none;
-  margin-top: 6px;
+.question-card ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* تم صفحه */
-.theme-toggle {
-  margin-top: 8px;
-  user-select: none;
+.question-card li {
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
-  gap: 16px;
-  font-size: 1.1rem;
 }
 
-.theme-toggle span {
+.question-card input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 2px solid #000;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
-  color: #222;
-  user-select: none;
+  margin-left: 10px;
+  position: relative;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.question-card input[type="radio"]:checked::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.action-buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 5px;
+  gap: 20px;
 }
-.active {
+
+.btn {
   background: linear-gradient(135deg, #3bb1ff, #8e55ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
-/* ریسپانسیو */
-@media (max-width: 900px) {
-  body {
-    padding: 10px;
-    flex-direction: column;
-    align-items: center;
+
+.btn:hover {
+  background: linear-gradient(135deg, #8e55ff, #3bb1ff);
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 20px 15px;
   }
-  .profile-form {
-    display: grid;
+  .exam-info {
     grid-template-columns: 1fr;
   }
-  main {
-    width: 100%;
-    max-width: 100vw;
-    min-height: auto;
-    margin-top: 20px;
-    border-radius: 12px;
-    padding: 20px 15px;
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
   }
 }
