@@ -1,0 +1,128 @@
+@import url("../../main.css");
+@import url("../navbar.css");
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #7a4fff, #3e9aff);
+  min-height: 100vh;
+  color: #222;
+  display: flex;
+  justify-content: flex-end;
+  direction: rtl;
+  gap: 15px;
+}
+
+/* محتوای اصلی */
+main {
+  background: #d3d0ce;
+  border-radius: 12px;
+  flex: 1;
+  padding: 25px 30px;
+  margin: 50px;
+  max-height: 680px;
+  color: #222;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+  user-select: text;
+}
+
+main h2 {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* کارت‌های آزمون */
+.exam-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.exam-card {
+  background: #111;
+  border-radius: 8px;
+  color: #eee;
+  box-shadow: 0 0 8px rgb(0 0 0 / 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.exam-card header {
+  background: linear-gradient(135deg, #3bb1ff, #8e55ff);
+  padding: 8px;
+  border-radius: 8px 8px 0 0;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.exam-card p {
+  margin: 5px 10px;
+  font-size: 0.9rem;
+}
+
+.exam-card strong {
+  color: #3bb1ff;
+  margin: 5px 10px;
+}
+
+.exam-card footer {
+  font-size: 0.8rem;
+  background: linear-gradient(135deg, #3bb1ff, #8e55ff) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  margin: 5px 10px;
+}
+
+/* آیکون‌ها */
+.exam-card iconify-icon {
+  vertical-align: middle;
+  margin-left: 5px;
+  color: #eee !important;
+}
+
+.exam-card hr {
+  width: 100%;
+  margin: 10px 0px;
+  border: none;
+  height: 2px;
+  background-image: linear-gradient(135deg, #3bb1ff, #8e55ff);
+}
+
+/* ریسپانسیو */
+@media (max-width: 1200px) {
+  main {
+    padding: 20px 15px;
+  }
+  .exam-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    padding: 20px 15px;
+  }
+  .exam-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  main {
+    padding: 20px 15px;
+    margin: 0 10px;
+  }
+  body {
+    gap: 0;
+  }
+  .exam-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
