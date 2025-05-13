@@ -36,7 +36,7 @@ main h2 {
 /* فرم اطلاعات پروفایل */
 .profile-form {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px 40px;
   direction: rtl;
 }
@@ -142,14 +142,26 @@ main h2 {
   user-select: none;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 16px;
   font-size: 1.1rem;
 }
 
 .theme-toggle span {
   cursor: pointer;
-  color: #3b8dff;
+  color: #222;
   user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.active {
+  background: linear-gradient(135deg, #3bb1ff, #8e55ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 /* ریسپانسیو */
 @media (max-width: 900px) {
@@ -158,10 +170,9 @@ main h2 {
     flex-direction: column;
     align-items: center;
   }
-  .profile-form{
+  .profile-form {
     display: grid;
     grid-template-columns: 1fr;
-    
   }
   main {
     width: 100%;
