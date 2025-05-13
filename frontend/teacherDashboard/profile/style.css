@@ -67,7 +67,7 @@ main h2 {
 .input-wrapper iconify-icon {
   padding: 0 12px;
   font-size: 20px;
-  color: #999;
+  color: #eee !important;
   flex-shrink: 0;
   user-select: none;
 }
