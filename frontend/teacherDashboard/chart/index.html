@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>داشبورد</title>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <aside id="sidebar" aria-label="پنل کاربری">
+      <img class="profile-pic" src="/images/Ellipse 2.svg" aria-hidden="true" />
+      <div class="username">جمال الهامی نیا</div>
+      <div class="role">معلم</div>
+      <nav>
+        <a href="../profile/index.html" tabindex="0" aria-label="پروفایل">
+          <iconify-icon icon="solar:user-circle-broken"></iconify-icon>
+          پروفایل
+        </a>
+        <a
+          href="../make-exam/index.html"
+          tabindex="0"
+          aria-label="ایجاد آزمون جدید"
+        >
+          <iconify-icon icon="solar:add-circle-broken"></iconify-icon>
+          ایجاد آزمون جدید
+        </a>
+        <a
+          href="../exams/index.html"
+          class="link-primary"
+          tabindex="0"
+          aria-label="نمودار تحصیلی"
+        >
+          <iconify-icon icon="solar:chart-broken"></iconify-icon>
+          نمودار تحصیلی
+        </a>
+      </nav>
+      <a
+        href="./index.html"
+        class="logout"
+        style="text-decoration: none"
+        tabindex="0"
+        aria-label="خروج از حساب"
+      >
+        <iconify-icon icon="solar:logout-3-broken"></iconify-icon>
+        خروج از حساب
+      </a>
+    </aside>
+    <iconify-icon
+      id="hamburgerBtn"
+      class="hamburger"
+      icon="solar:hamburger-menu-broken"
+    ></iconify-icon>
+    <main role="main" tabindex="0">
+      <h2>نمودار تحصیلی</h2>
+
+      <div class="profile-form">
+        <div class="form-group">
+          <label for="grade">پایه:</label>
+          <div class="input-wrapper">
+            <input type="text" id="grade" name="grade" placeholder="دهم" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="major">رشته:</label>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="major"
+              name="major"
+              placeholder="شبکه و نرم افزار"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="myChart"></canvas>
+        <canvas id="myChart1"></canvas>
+        <canvas id="myChart2"></canvas>
+        <canvas id="myChart3"></canvas>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const sidebar = document.getElementById("sidebar");
+
+      hamburgerBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+
+      // Optional: close sidebar when clicking outside (on mobile)
+      document.addEventListener("click", (e) => {
+        if (
+          !sidebar.contains(e.target) &&
+          !hamburgerBtn.contains(e.target) &&
+          sidebar.classList.contains("open")
+        ) {
+          sidebar.classList.remove("open");
+        }
+      });
+      const ctx = document.getElementById("myChart").getContext("2d");
+      const ctx1 = document.getElementById("myChart1").getContext("2d");
+      const ctx2 = document.getElementById("myChart2").getContext("2d");
+      const ctx3 = document.getElementById("myChart3").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "Figma",
+            "Sketch",
+            "XD",
+            "Photoshop",
+            "Illustrator",
+            "AfterEffect",
+            "InDesign",
+            "Maya",
+            "Premiere",
+            "Final Cut",
+          ],
+          datasets: [
+            {
+              label: "کیارش حسن زاده",
+              data: [20, 30, 50, 40, 60, 80, 70, 90, 100, 60],
+              backgroundColor: "#AD46FF",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+      const myChart1 = new Chart(ctx1, {
+        type: "bar",
+        data: {
+          labels: [
+            "Figma",
+            "Sketch",
+            "XD",
+            "Photoshop",
+            "Illustrator",
+            "AfterEffect",
+            "InDesign",
+            "Maya",
+            "Premiere",
+            "Final Cut",
+          ],
+          datasets: [
+            {
+              label: "کیارش حسن زاده",
+              data: [20, 30, 50, 40, 60, 80, 70, 90, 100, 60],
+              backgroundColor: "#AD46FF",
+              textColor: "#00B8DB",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+      const myChart2 = new Chart(ctx2, {
+        type: "bar",
+        data: {
+          labels: [
+            "Figma",
+            "Sketch",
+            "XD",
+            "Photoshop",
+            "Illustrator",
+            "AfterEffect",
+            "InDesign",
+            "Maya",
+            "Premiere",
+            "Final Cut",
+          ],
+          datasets: [
+            {
+              label: "کیارش حسن زاده",
+              data: [20, 30, 50, 40, 60, 80, 70, 90, 100, 60],
+              backgroundColor: "#AD46FF",
+              textColor: "#00B8DB",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+      const myChart3 = new Chart(ctx3, {
+        type: "bar",
+        data: {
+          labels: [
+            "Figma",
+            "Sketch",
+            "XD",
+            "Photoshop",
+            "Illustrator",
+            "AfterEffect",
+            "InDesign",
+            "Maya",
+            "Premiere",
+            "Final Cut",
+          ],
+          datasets: [
+            {
+              label: "کیارش حسن زاده",
+              data: [20, 30, 50, 40, 60, 80, 70, 90, 100, 60],
+              backgroundColor: "#AD46FF",
+              textColor: "#00B8DB",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
