@@ -9,14 +9,13 @@
   </head>
   <body>
     <aside id="sidebar" aria-label="پنل کاربری">
-      <img class="profile-pic" src="/images/Ellipse 2.svg" aria-hidden="true" />
+      <img class="profile-pic" src="/images/Ellipse 1.svg" aria-hidden="true" />
       <div class="username">جمال الهامی نیا</div>
       <div class="role">معلم</div>
       <nav>
         <a
           href="../profile/index.html"
           tabindex="0"
-          class="link-primary"
           aria-label="پروفایل"
         >
           <iconify-icon icon="solar:user-circle-broken"></iconify-icon>
@@ -25,6 +24,7 @@
         <a
           href="../make-exam/index.html"
           tabindex="0"
+          class="link-primary"
           aria-label="تاریخچه آزمون ها"
         >
           <iconify-icon icon="solar:add-circle-broken"></iconify-icon>
@@ -52,107 +52,57 @@
       icon="solar:hamburger-menu-broken"
     ></iconify-icon>
     <main role="main" tabindex="0">
-      <h2>پروفایل</h2>
+      <div class="container">
+        <h2>وضعیت تحصیلی فرزند من</h2>
 
-      <section aria-labelledby="user-info-header">
-        <h3 id="user-info-header" class="section-header">اطلاعات کاربر</h3>
-        <div class="profile-form">
-          <div class="form-group">
-            <label for="username">نام کاربری</label>
-            <div class="input-wrapper">
-              <iconify-icon icon="solar:user-circle-broken"></iconify-icon>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                placeholder="نام کاربری"
-                autocomplete="username"
-                value="کیارش حسن زاده"
-                aria-required="true"
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">ایمیل</label>
-            <div class="input-wrapper">
-              <iconify-icon icon="solar:mailbox-broken"></iconify-icon>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="ایمیل"
-                autocomplete="email"
-                value="example@example.com"
-                aria-required="true"
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="phone">تلفن</label>
-            <div class="input-wrapper">
-              <iconify-icon icon="solar:phone-broken"></iconify-icon>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="تلفن"
-                autocomplete="tel"
-                value="09123456789"
-                aria-required="true"
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="password">رمز عبور</label>
-            <div class="input-wrapper">
-              <iconify-icon icon="solar:lock-password-broken"></iconify-icon>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="رمز عبور"
-                autocomplete="current-password"
-                value="123456"
-                aria-required="true"
-              />
-            </div>
-          </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>درس</th>
+                <th>نمره اول</th>
+                <th>نمره دوم</th>
+                <th>نمره سوم</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ریاضی</td>
+                <td>20</td>
+                <td>20</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <td>الزامات</td>
+                <td>20</td>
+                <td>20</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <td>دانش فنی</td>
+                <td>20</td>
+                <td>20</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <td>فارسی</td>
+                <td>20</td>
+                <td>20</td>
+                <td>19</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </section>
 
-      <section aria-labelledby="education-info-header">
-        <h3 id="education-info-header" class="section-header">
-          اطلاعات تحصیلی
-        </h3>
-        <p class="info-text" tabindex="0">
-          پایه دهم &nbsp;&nbsp; رشته: شبکه و نرم افزار &nbsp;&nbsp; سال تحصیلی:
-          1403-1404
-        </p>
-      </section>
+        <div class="chart-container">
+          <canvas id="myChart"></canvas>
+        </div>
 
-      <section aria-labelledby="settings-header">
-        <h3 id="settings-header" class="section-header">تنظیمات</h3>
-        <p class="info-text font-type" tabindex="0">
-          نوع فونت:
-          <span title="وزیر" class="link-primary" tabindex="0" role="button"
-            >وزیر</span
-          >
-          <span title="تنها" tabindex="0" role="button">تنها</span>
-          <span title="نستلیق" tabindex="0" role="button">نستلیق</span>
-        </p>
-        <p class="theme-toggle" tabindex="0">
-          تم صفحه:
-          <span class="active" title="روشن" tabindex="0" role="button">
-            <iconify-icon icon="solar:moon-stars-broken"></iconify-icon>
-            روشن
-          </span>
-          <span title="تاریک" tabindex="0" role="button">
-            <iconify-icon icon="solar:sun-2-broken"></iconify-icon>
-            تاریک
-          </span>
-        </p>
-      </section>
+        <!-- دکمه تغییر -->
+        <div class="toggle-btn" onclick="toggleView()">نمایش به صورت جدول</div>
+      </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       const hamburgerBtn = document.getElementById("hamburgerBtn");
       const sidebar = document.getElementById("sidebar");
@@ -171,6 +121,56 @@
           sidebar.classList.remove("open");
         }
       });
+      // تنظیم نمودار
+      const ctx = document.getElementById("myChart").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "Figma",
+            "Sketch",
+            "XD",
+            "Photoshop",
+            "Illustrator",
+            "AfterEffect",
+            "InDesign",
+            "Maya",
+            "Premiere",
+            "Final Cut",
+          ],
+          datasets: [
+            {
+              label: "کیارش حسن زاده",
+              data: [20, 30, 50, 40, 60, 80, 70, 90, 100, 60],
+              backgroundColor: "#AD46FF",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+
+      // جابجایی بین جدول و نمودار
+      function toggleView() {
+        const tableContainer = document.querySelector(".table-container");
+        const chartContainer = document.querySelector(".chart-container");
+        const toggleBtn = document.querySelector(".toggle-btn");
+
+        if (tableContainer.style.display === "none") {
+          tableContainer.style.display = "block";
+          chartContainer.style.display = "none";
+          toggleBtn.textContent = "نمایش به صورت نمودار";
+        } else {
+          tableContainer.style.display = "none";
+          chartContainer.style.display = "block";
+          toggleBtn.textContent = "نمایش به صورت جدول";
+        }
+      }
     </script>
   </body>
 </html>

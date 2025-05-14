@@ -25,161 +25,71 @@ main {
   user-select: text;
 }
 
-main h2 {
-  margin-top: 0;
-  font-weight: 700;
-  font-size: 1.8rem;
-  margin-bottom: 25px;
+h2 {
   text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
-/* فرم اطلاعات پروفایل */
-.profile-form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px 40px;
-  direction: rtl;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-group label {
-  font-weight: 700;
-  font-size: 1.1rem;
-  user-select: text;
-}
-
-.input-wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  background: #111;
-  border-radius: 8px;
-  overflow: hidden;
-  color: #eee;
-  height: 40px;
-}
-
-.input-wrapper iconify-icon {
-  padding: 0 12px;
-  font-size: 20px;
-  color: #eee !important;
-  flex-shrink: 0;
-  user-select: none;
-}
-
-.input-wrapper input {
-  background: transparent;
-  border: none;
-  color: #eee;
-  font-size: 1rem;
-  padding: 0 12px;
-  width: 100%;
-  height: 100%;
-  direction: rtl !important;
-  outline: none;
-  user-select: text;
-  font-family: "Vazirmatn", sans-serif;
-}
-
-.input-wrapper input::placeholder {
-  color: #999;
-}
-
-/* بخش اطلاعات کاربر و رمز عبور */
-.section-header {
-  font-weight: 700;
-  font-size: 1.3rem;
+.toggle-btn {
+  text-align: center;
   margin-top: 20px;
-  margin-bottom: 15px;
-  user-select: text;
-}
-
-/* اطلاعات تحصیلی و تنظیمات */
-.info-text {
   font-size: 1rem;
-  margin-top: 10px;
-  line-height: 1.4;
-  user-select: text;
-}
-
-.info-text strong {
-  font-weight: 700;
-}
-
-/* لینک‌های تنظیمات */
-.settings-links {
-  margin-top: 15px;
-  font-size: 1rem;
-  user-select: text;
-}
-
-.settings-links span {
-  margin-left: 10px;
+  color: #3e9aff;
   cursor: pointer;
-  color: #3b8dff;
-  user-select: none;
 }
 
-.settings-links span:hover {
+.toggle-btn:hover {
   text-decoration: underline;
 }
 
-/* فونت های تنظیمات */
-.font-type {
-  direction: rtl;
-  user-select: none;
-  margin-top: 6px;
+.table-container,
+.chart-container {
+  margin-top: 20px;
 }
 
-/* تم صفحه */
-.theme-toggle {
-  margin-top: 8px;
-  user-select: none;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 1.1rem;
+.table-container {
+  display: none;
 }
 
-.theme-toggle span {
-  cursor: pointer;
-  color: #222;
-  user-select: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
 }
-.active {
-  background: linear-gradient(135deg, #3bb1ff, #8e55ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+
+table th,
+table td {
+  border: 2px solid #111;
+  padding: 8px;
   text-align: center;
 }
-/* ریسپانسیو */
-@media (max-width: 900px) {
-  body {
+
+table th {
+  background-color: #3e9aff;
+  color: #fff;
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 400px;
+  background-color: #151515;
+  border-radius: 12px;
+  color: #ffffff !important;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .container {
     padding: 10px;
-    flex-direction: column;
-    align-items: center;
   }
-  .profile-form {
-    display: grid;
-    grid-template-columns: 1fr;
+
+  h2 {
+    font-size: 1.4rem;
   }
-  main {
-    width: 100%;
-    max-width: 100vw;
-    min-height: auto;
-    margin-top: 20px;
-    border-radius: 12px;
-    padding: 20px 15px;
+
+  .chart-container canvas {
+    height: 250px !important;
   }
 }
