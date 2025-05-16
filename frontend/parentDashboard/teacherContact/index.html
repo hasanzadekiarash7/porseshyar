@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>داشبورد</title>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <aside id="sidebar" aria-label="پنل کاربری">
+      <img class="profile-pic" src="/images/Ellipse 1.svg" aria-hidden="true" />
+      <div class="username">جمال الهامی نیا</div>
+      <div class="role">معلم</div>
+      <nav>
+        <a href="../profile/index.html" tabindex="0" aria-label="پروفایل">
+          <iconify-icon icon="solar:user-circle-broken"></iconify-icon>
+          پروفایل
+        </a>
+        <a href="../status/index.html" tabindex="0">
+          <iconify-icon icon="solar:chart-broken"></iconify-icon>
+          نمودار تحصیلی
+        </a>
+        <a
+          href="../teacherContact/index.html"
+          class="link-primary"
+          tabindex="0"
+        >
+          <iconify-icon icon="solar:add-circle-broken"></iconify-icon>
+          ارتباط با معلم.
+        </a>
+      </nav>
+      <a
+        href="./index.html"
+        class="logout"
+        style="text-decoration: none"
+        tabindex="0"
+        class="link-primary"
+        aria-label="خروج از حساب"
+      >
+        <iconify-icon icon="solar:logout-3-broken"></iconify-icon>
+        خروج از حساب
+      </a>
+    </aside>
+    <iconify-icon
+      id="hamburgerBtn"
+      class="hamburger"
+      icon="solar:hamburger-menu-broken"
+    ></iconify-icon>
+    <main role="main" tabindex="0">
+      <h2>نمودار تحصیلی</h2>
+
+      <div class="search-bar">
+        <label for="username">نام کاربری</label>
+        <div class="input-wrapper">
+          <iconify-icon icon="solar:magnifer-broken"></iconify-icon>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="نام کاربری"
+            autocomplete="username"
+            value="کیارش حسن زاده"
+            aria-required="true"
+          />
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <img src="../../images/Ellipse 2.svg" alt="Teacher Image" />
+          <div class="card-content">
+            <h3>جمال الهامی نیا</h3>
+            <p>معلم ریاضی</p>
+            <p>پایه های تحصیلی: دهم، یازدهم، دوازدهم</p>
+            <p>
+              رشته های در حال تحصیل: کامپیوتر، تاسیسات، الکترونیک، الکتروتکنیک،
+              مکاترونیک
+            </p>
+          </div>
+          <div class="contact">شماره تماس: 09123456789</div>
+        </div>
+        <div class="card">
+          <img src="../../images/Ellipse 2.svg" alt="Teacher Image" />
+          <div class="card-content">
+            <h3>جمال الهامی نیا</h3>
+            <p>معلم ریاضی</p>
+            <p>پایه های تحصیلی: دهم، یازدهم، دوازدهم</p>
+            <p>
+              رشته های در حال تحصیل: کامپیوتر، تاسیسات، الکترونیک، الکتروتکنیک،
+              مکاترونیک
+            </p>
+          </div>
+          <div class="contact">شماره تماس: 09123456789</div>
+        </div>
+        <div class="card">
+          <img src="../../images/Ellipse 2.svg" alt="Teacher Image" />
+          <div class="card-content">
+            <h3>جمال الهامی نیا</h3>
+            <p>معلم ریاضی</p>
+            <p>پایه های تحصیلی: دهم، یازدهم، دوازدهم</p>
+            <p>
+              رشته های در حال تحصیل: کامپیوتر، تاسیسات، الکترونیک، الکتروتکنیک،
+              مکاترونیک
+            </p>
+          </div>
+          <div class="contact">شماره تماس: 09123456789</div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const sidebar = document.getElementById("sidebar");
+
+      hamburgerBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+
+      // Optional: close sidebar when clicking outside (on mobile)
+      document.addEventListener("click", (e) => {
+        if (
+          !sidebar.contains(e.target) &&
+          !hamburgerBtn.contains(e.target) &&
+          sidebar.classList.contains("open")
+        ) {
+          sidebar.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
+</html>
